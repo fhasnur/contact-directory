@@ -57,7 +57,7 @@ export class AddressController {
         contact_id: Number(req.params.contactId)
       }
 
-      const response = await AddressService.remove(req.user!, request);
+      await AddressService.remove(req.user!, request);
       res.status(200).json({
         data: "OK"
       });
